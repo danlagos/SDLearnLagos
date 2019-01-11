@@ -129,6 +129,7 @@ class Task_list
     #   @list.each {|x| p x if !x.complete }
     # end
   end
+  # list of items not completed and due today
   def due_today
     @list.each { |x|
       if x.type == "task"
@@ -142,6 +143,7 @@ class Task_list
       end
     }
   end
+  # create a list of all items not completed in order of due date
   def due_list
     @list.each { |x|
       if x.type == "task"
